@@ -1,4 +1,4 @@
-package com.example.springstudybook.web.domain.posts;
+package com.example.springstudybook.domain.posts;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;

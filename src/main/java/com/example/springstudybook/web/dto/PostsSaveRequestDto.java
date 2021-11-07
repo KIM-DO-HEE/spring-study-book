@@ -1,11 +1,9 @@
 package com.example.springstudybook.web.dto;
 
-import com.example.springstudybook.web.domain.posts.Posts;
+import com.example.springstudybook.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.Entity;
 
 @Getter
 @NoArgsConstructor

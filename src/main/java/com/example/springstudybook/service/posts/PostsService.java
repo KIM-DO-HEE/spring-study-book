@@ -1,14 +1,12 @@
 package com.example.springstudybook.service.posts;
 
-import com.example.springstudybook.web.domain.posts.Posts;
-import com.example.springstudybook.web.domain.posts.PostsRepository;
+import com.example.springstudybook.domain.posts.Posts;
+import com.example.springstudybook.domain.posts.PostsRepository;
 import com.example.springstudybook.web.dto.PostsResponseDto;
 import com.example.springstudybook.web.dto.PostsSaveRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service

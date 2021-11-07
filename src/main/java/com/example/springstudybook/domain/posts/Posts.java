@@ -1,16 +1,17 @@
-package com.example.springstudybook.web.domain.posts;
+package com.example.springstudybook.domain.posts;
 
-import com.example.springstudybook.web.domain.BaseTimeEntity;
+import com.example.springstudybook.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 // junit5 변경 후 코드 변경 : 참고자료 : https://jojoldu.tistory.com/539?category=717427
+// 오류 : https://github.com/jojoldu/freelec-springboot2-webservice/issues?q=
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts extends BaseTimeEntity                                             {
+public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

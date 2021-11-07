@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title> HTML 기본 구조 </title>
-</head>
-<body>
-<h1>스프링부트 웹 서비스</h1>
-</body>
-</html>
+{{>layout/header}}
+    <h1>스프링부트 웹 서비스</h1>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+            </div>
+        </div>
+    </div>
+{{>layout/footer}}

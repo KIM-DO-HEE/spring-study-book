@@ -1,7 +1,7 @@
 package com.example.springstudybook.web;
 
-import com.example.springstudybook.web.domain.posts.Posts;
-import com.example.springstudybook.web.domain.posts.PostsRepository;
+import com.example.springstudybook.domain.posts.Posts;
+import com.example.springstudybook.domain.posts.PostsRepository;
 import com.example.springstudybook.web.dto.PostsSaveRequestDto;
 import com.example.springstudybook.web.dto.PostsUpdateRequestDto;
 import org.junit.jupiter.api.AfterEach;
@@ -18,9 +18,7 @@ import org.springframework.http.ResponseEntity;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class PostsApiControllerTest {
