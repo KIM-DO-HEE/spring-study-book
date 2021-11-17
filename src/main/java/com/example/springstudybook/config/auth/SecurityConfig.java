@@ -12,7 +12,7 @@ import org.springframework.security.oauth2.client.userinfo.CustomUserTypesOAuth2
 //WebSecurityConfigurerAdapter가 Adapter 패턴을 이용하나?
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final CustomUserTypesOAuth2UserService customUserTypesOAuth2UserService;
+    private final CustomOAuth2UserService customUserTypesOAuth2UserService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

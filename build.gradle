@@ -19,6 +19,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-devtools'
     implementation('org.projectlombok:lombok')
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mustache', version: '2.5.5'
     annotationProcessor('org.projectlombok:lombok')
@@ -27,6 +28,9 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
     implementation('org.springframework.session:spring-session-jdbc')
     testImplementation("org.springframework.security:spring-security-test")
+
+    implementation group: 'org.springframework.session', name: 'spring-session-jdbc', version: '2.5.1'
+
 
     runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

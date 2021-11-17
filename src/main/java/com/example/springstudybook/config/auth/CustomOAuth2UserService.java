@@ -1,5 +1,6 @@
 package com.example.springstudybook.config.auth;
 
+import com.example.springstudybook.config.dto.OAuthAttributes;
 import com.example.springstudybook.config.dto.SessionUser;
 import com.example.springstudybook.domain.user.User;
 import com.example.springstudybook.domain.user.UserRepository;
