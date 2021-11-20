@@ -9,12 +9,15 @@ import lombok.With;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.*;
 import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -30,6 +33,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class PostsApiControllerTest {
     @LocalServerPort
@@ -60,6 +64,9 @@ class PostsApiControllerTest {
     }
 
     @Test
+//  인증된 모의(가짜)사용자를 만들어서 사용, roles에 권한을 추가할 수 있다
+//  이 어노테이션은 ROLE_USER 권한을 가진 사용자가 API를 요청하는것과 동일한 효과
+//   But, @MockMvc에서만 작동하기 때문에 MockMvc를 import 해야한다
     @WithMockUser(roles = "USER")
     public void insertPost() throws Exception{
 //        given
@@ -144,9 +151,6 @@ class PostsApiControllerTest {
         Posts posts = postsList.get(0);
 
         System.out.println(">>>>>>>>>>> createDate="+posts.getCreatedDate()+",modifiedDate="+posts.getModifiedDate());
-
-        assertThat(posts.getCreatedDate().isAfter(now));
-        assertThat(posts.getModifiedDate().isAfter(now));
     }
 
 }
